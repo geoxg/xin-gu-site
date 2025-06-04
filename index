@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xin Gu | GIScience & Criminology</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Xin Gu</h1>
+    <p>Postdoctoral Scholar | GIScience | Spatial Data Science | Criminology</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Welcome!</h2>
+      <p>I am a Postdoctoral Scholar at Texas State University. My research blends GIScience, urban analytics, and public health to explore how people interact with their environments.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Xin Gu</p>
+  </footer>
+</body>
+</html>
