@@ -36,6 +36,59 @@
   margin-bottom: 1em;
 }
 
+/* Make sure container is fluid */
+.container {
+  width: 100%;
+  max-width: 1100px; /* or whatever suits your design */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Flexbox layout for larger screens */
+.about-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Image responsiveness */
+.profile-pic {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Text section should also be flexible */
+.bio-text {
+  flex: 1;
+  font-size: 1rem;
+}
+
+/* Typography and layout tweaks for smaller screens */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bio-text {
+    font-size: 0.95rem;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.4rem;
+  }
+
+  .main-nav a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+
 .nav-wrapper {
     display: flex;
     justify-content: center;
