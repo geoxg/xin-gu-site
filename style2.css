@@ -74,15 +74,15 @@
     text-align: center;
   }
 
-  .bio-text {
+.bio-text {
     font-size: 0.95rem;
   }
 
-  h1, h2, h3 {
+h1, h2, h3 {
     font-size: 1.4rem;
   }
 
-  .main-nav a {
+.main-nav a {
     display: block;
     margin-bottom: 0.5rem;
   }
@@ -94,6 +94,9 @@
     justify-content: center;
     background-color: white;
     padding: 0.8rem 0;
+    max-width: 1000px; 
+    margin: 0 auto; 
+
 }
   
 .main-nav {
@@ -110,9 +113,15 @@
     position: relative;
 }
   
-  .main-nav a:hover {
+.main-nav a:hover {
     text-decoration: underline;
 }
+
+.main-nav a.active {
+  color: #e67829; /* Choose a distinct highlight color */
+  padding-bottom: 2px;
+}
+
   
 main h2 {
   font-size: 2rem;
@@ -214,12 +223,12 @@ main p {
     color: #004080;
   }
   
-  footer {
+footer {
     text-align: center;
     padding: 1rem;
     background: #f1f1f1;
     margin-top: 3rem;
-  }
+}
 
   .project {
     display: flex;
@@ -229,17 +238,17 @@ main p {
     align-items: flex-start;
   }
   
-  .project-img {
+.project-img {
     width: 300px;
     border-radius: 8px;
     object-fit: cover;
   }
   
-  .project-text {
+.project-text {
     flex: 1;
   }
   
-  .project-text h3 {
+.project-text h3 {
     margin-top: 0;
   }
   
@@ -286,7 +295,7 @@ main p {
 }
 
 
-  .img-click {
+.img-click {
     cursor: zoom-in;
   }
   
