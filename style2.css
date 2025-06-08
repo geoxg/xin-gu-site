@@ -168,6 +168,10 @@ main {
 }
 
 
+
+
+/* Default: visible on desktop */
+
 .nav-wrapper {
     display: flex !important;
     position:static; 
@@ -178,7 +182,7 @@ main {
     margin: 0 auto; 
 
 }
-  
+
 .main-nav {
     display: flex;
     gap: 2rem;
