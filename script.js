@@ -20,17 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Toggle mobile nav
-  const menuToggle = document.getElementById("menuToggle");
-  const mainNav = document.getElementById("mainNav");
 
-  if (menuToggle && mainNav) {
-    menuToggle.addEventListener("click", () => {
-      mainNav.classList.toggle("open");
-    });
-  } else {
-    console.warn("Menu toggle or nav not found in the DOM");
-  }
 });
 
 
