@@ -75,33 +75,7 @@ main {
 }
 
 
-/* Typography and layout tweaks for smaller screens */
 @media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .main-nav.open {
-    display: flex;
-  }
-
-  .main-nav.open + .color-stripe-bar {
-    margin-top: 0.5rem;
-  }
-
-  .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #004080;
-    position: relative;
-    z-index: 1001;
-}
-
   .main-nav {
     display: none;
     flex-direction: column;
@@ -109,7 +83,6 @@ main {
     background-color: #fff;
     width: 100%;
     position: static;
-    margin-top:0.5rem;
     top: 100%;
     left: 0;
     right: 0;
@@ -118,34 +91,21 @@ main {
     text-align: center; 
   }
 
-.bio-text {
-    font-size: 0.95rem;
+  .main-nav.open {
+    display: flex;
   }
 
-h1, h2, h3 {
-    font-size: 1.4rem;
+  main {
+    margin-top: 0;
+    padding-top: 1rem;
   }
 
-.main-nav a {
-    padding: 1rem;
-    font-size: 1.2rem;
-    border-bottom: 1px solid #eee;
-    width: 100%;
-    text-align: center;
-    color: #2a3f6c;
-    font-weight: 600;
+  /* Optional: Add spacing to avoid overlap */
+  .main-nav.open + .color-stripe-bar + main {
+    margin-top: 1rem;
   }
-
-.main-nav a.active {
-    color: #e67829;
-
 }
 
-.color-stripe-bar {
-  margin-top: 0.5rem !important;
-}
-
-}
 
 
 .nav-wrapper {
