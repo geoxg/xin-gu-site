@@ -21,6 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const nav = document.querySelector(".main-nav");
+
+  menuToggle.addEventListener("click", function () {
+    nav.classList.toggle("open");
+  });
+});
+
+
 });
 
 

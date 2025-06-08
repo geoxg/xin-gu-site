@@ -81,18 +81,20 @@ main {
 
   /* Nav hidden by default */
   .main-nav {
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: center;
-    background-color: #fff;
+    background-color: white;
     width: 100%;
-    padding: 1rem 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    position: relative;
   }
 
+  .main-nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 
 
   /* Nav links */
