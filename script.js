@@ -1,4 +1,3 @@
-// Console check
 console.log("Welcome to Xin Gu's Academic Site!");
 
 // Back-to-top button behavior
@@ -11,8 +10,8 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Highlight the current page in the navigation
 document.addEventListener("DOMContentLoaded", () => {
+  // Highlight the current page
   const currentPage = location.pathname.split("/").pop();
   document.querySelectorAll(".main-nav a").forEach(link => {
     if (link.getAttribute("href") === currentPage) {
@@ -20,18 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
-document.addEventListener("DOMContentLoaded", function () {
+  // Toggle menu functionality
   const menuToggle = document.getElementById("menuToggle");
   const nav = document.querySelector(".main-nav");
-
-  menuToggle.addEventListener("click", function () {
-    nav.classList.toggle("open");
-  });
+  
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+  }
 });
-
-
-});
-
-
-

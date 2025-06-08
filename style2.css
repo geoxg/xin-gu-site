@@ -99,14 +99,18 @@ main {
 
   /* Nav links */
   .main-nav a {
-    display: block;
-    padding: 1rem;
+    display: none;
+    flex-direction: column;
+    background-color: white;
     width: 100%;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2a3f6c;
-    text-decoration: none;
-    border-bottom: 1px solid #eee;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  .main-nav.open {
+    display: flex;
   }
 
   .main-nav a.active {
@@ -171,12 +175,12 @@ main {
 }
 
 .main-nav {
-    display: flex;
+    /*display: flex;*/
     gap: 2rem;
     font-size: 1.8rem;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 1rem auto;
 }
   
 .main-nav a {
