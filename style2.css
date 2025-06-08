@@ -175,7 +175,7 @@ main {
 }
 
 .main-nav {
-    /*display: flex;*/
+    display: flex;
     gap: 2rem;
     font-size: 1.8rem;
     justify-content: center;
