@@ -75,67 +75,6 @@ main {
 }
 
 
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-  .container, .about-container, .project-text, .contact-form, main.container {
-    width: 95%;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-
-  h1, h2, h3 {
-    font-size: 1.5em;
-  }
-
-
-  .menu-toggle {
-    display: block; /* only on mobile */
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #004080;
-    margin-top: 1rem;
-  }
-
-  .color-stripe-bar {
-    margin-top: 4rem;
-  }
-
-  .profile-pic {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 1em auto;
-  }
-
-  .form-row {
-    flex-direction: column;
-  }
-
-  .form-row input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .project {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 1em;
-  }
-
-  .back-to-top-float {
-    bottom: 20px;
-    right: 20px;
-  }
-}
-
-
 /* Preserve mobile layout styles */
 @media (max-width: 768px) {
   .container, .about-container, .project-text, .contact-form, main.container {
@@ -187,7 +126,6 @@ main {
     width: 100%;
     padding: 1rem 0;
     border-bottom: 1px solid #eee;
-    margin: 0;
   }
   .main-nav a.active { color: #e67829; }
 
