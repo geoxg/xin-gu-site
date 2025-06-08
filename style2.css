@@ -77,34 +77,25 @@ main {
 
 @media (max-width: 768px) {
   .main-nav {
-    display: none;
+    display: none; /* hide by default */
     flex-direction: column;
     align-items: center;
     background-color: #fff;
     width: 100%;
     position: static;
-    top: 100%;
-    left: 0;
-    right: 0;
     z-index: 999;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center; 
+    text-align: center;
   }
 
   .main-nav.open {
-    display: flex;
+    display: flex; /* show when toggle is clicked */
   }
 
-  main {
-    margin-top: 0;
-    padding-top: 1rem;
-  }
-
-  /* Optional: Add spacing to avoid overlap */
-  .main-nav.open + .color-stripe-bar + main {
-    margin-top: 1rem;
+  .menu-toggle {
+    display: block; /* visible only on mobile */
   }
 }
+
 
 
 
