@@ -1,6 +1,7 @@
+// Console check
 console.log("Welcome to Xin Gu's Academic Site!");
 
-// Show/hide back-to-top button
+// Back-to-top button behavior
 const backToTopBtn = document.getElementById('backToTop');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
@@ -10,8 +11,8 @@ window.addEventListener('scroll', () => {
   }
 });
 
+// Highlight the current page in the navigation
 document.addEventListener("DOMContentLoaded", () => {
-  // Highlight current nav link
   const currentPage = location.pathname.split("/").pop();
   document.querySelectorAll(".main-nav a").forEach(link => {
     if (link.getAttribute("href") === currentPage) {
@@ -19,20 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Toggle nav menu on mobile
+  // Toggle mobile nav
   const menuToggle = document.getElementById("menuToggle");
-  const nav = document.querySelector(".main-nav");
+  const mainNav = document.getElementById("mainNav");
 
-  menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
-  });
-
-  // Optional: Hide menu after clicking a nav link (mobile UX improvement)
-  document.querySelectorAll(".main-nav a").forEach(link => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("open");
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("open");
     });
-  });
+  } else {
+    console.warn("Menu toggle or nav not found in the DOM");
+  }
 });
+
 
 
