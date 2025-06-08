@@ -75,59 +75,9 @@ main {
 }
 
 
-
+/* Mobile-specific adjustments */
 @media (max-width: 768px) {
-
-
-  /* Nav hidden by default */
-  .main-nav {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    width: 100%;
-    text-align: center;
-  }
-
-  .main-nav.open {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-
-  /* Nav links */
-  .main-nav a {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-
-  .main-nav.open {
-    display: flex;
-  }
-
-  .main-nav a.active {
-    color: #e67829;
-  }
-
-  /* Prevent overlap */
-  .main-nav.open + .color-stripe-bar {
-    margin-top: 1rem;
-  }
-
-  .about-section {
-    margin-top: 2rem;
-  }
-
-  /* Adjust layout spacing */
-  .container, .about-container, .project-text, .contact-form {
+  .container, .about-container, .project-text, .contact-form, main.container {
     width: 95%;
     padding: 0 10px;
     box-sizing: border-box;
@@ -137,8 +87,35 @@ main {
     font-size: 1.5em;
   }
 
+
+  .menu-toggle {
+    display: block; /* only on mobile */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #004080;
+    margin-top: 1rem;
+  }
+
+  .color-stripe-bar {
+    margin-top: 4rem;
+  }
+
+  .profile-pic {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1em auto;
+  }
+
   .form-row {
     flex-direction: column;
+  }
+
+  .form-row input {
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .project {
@@ -159,20 +136,69 @@ main {
 }
 
 
+/* Preserve mobile layout styles */
+@media (max-width: 768px) {
+  .container, .about-container, .project-text, .contact-form, main.container {
+    width: 95%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  h1, h2, h3 { font-size: 1.5em; }
+  .profile-pic { width: 100%; max-width: none; margin: 0 auto 1em; }
+  .form-row { flex-direction: column; }
+  .form-row input { width: 100%; margin-bottom: 10px; }
+  .project { flex-direction: column; align-items: center; }
+  .project-img { width: 100%; max-width: 300px; margin-bottom: 1em; }
+  .back-to-top-float { bottom: 20px; right: 20px; }
+}
+
+/* ==== NEW MOBILE TOGGLE MENU STYLES ==== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #004080;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle { display: block; }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+  }
+  .main-nav.open {
+    display: flex;
+  }
+  .main-nav a {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+  }
+  .main-nav a.active { color: #e67829; }
+
+  .main-nav.open + .color-stripe-bar {
+    margin-top: 1rem;
+  }
+}
 
 
 /* Default: visible on desktop */
 
-.nav-wrapper {
-    display: flex !important;
-    position:static; 
-    justify-content: center;
-    background-color: white;
-    padding: 0.8rem 0;
-    max-width: 1000px; 
-    margin: 0 auto; 
-
-}
 
 .main-nav {
     display: flex;
@@ -511,76 +537,5 @@ button:hover {
   margin-top: 1rem;
 }
 
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #004080;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  z-index: 1001;
-}
 
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-  .container, .about-container, .project-text, .contact-form, main.container {
-    width: 95%;
-    padding: 0 10px;
-    box-sizing: border-box;
-  }
-
-  h1, h2, h3 {
-    font-size: 1.5em;
-  }
-
-
-  .menu-toggle {
-    display: block; /* only on mobile */
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: #004080;
-    margin-top: 1rem;
-  }
-
-  .color-stripe-bar {
-    margin-top: 4rem;
-  }
-
-  .profile-pic {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 1em auto;
-  }
-
-  .form-row {
-    flex-direction: column;
-  }
-
-  .form-row input {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .project {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-img {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 1em;
-  }
-
-  .back-to-top-float {
-    bottom: 20px;
-    right: 20px;
-  }
-}
 
