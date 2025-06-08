@@ -433,6 +433,18 @@ button:hover {
   margin-top: 1rem;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #004080;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1001;
+}
 
 /* Mobile-specific adjustments */
 @media (max-width: 768px) {
@@ -446,15 +458,13 @@ button:hover {
     font-size: 1.5em;
   }
 
-  .main-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .menu-toggle {
+    display: block; /* only on mobile */
   }
 
-  .main-nav a {
-    padding: 10px;
-    font-size: 1em;
+  .color-stripe-bar {
+    margin-top: 4rem;
   }
 
   .profile-pic {
