@@ -245,7 +245,7 @@ main p {
     display: flex;
     flex-wrap: nonwrap;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
   
 
