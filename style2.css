@@ -397,6 +397,32 @@ footer {
     font-weight: bold;
     cursor: pointer;
   }
+
+.scholar-link {
+  color: #6a1b9a; /* Deep purple */
+  font-style: italic;
+  font-weight: bold;
+
+  text-decoration: underline;
+  text-decoration-color: #6a1b9a;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+/* Optional: fine-tune hover + visited styles */
+.scholar-link:hover {
+  color: #4a148c;
+  text-decoration-color: #4a148c;
+}
+
+.scholar-link:visited {
+  color: #6a1b9a; /* Keep same color when visited */
+  text-decoration-color: #6a1b9a;
+}
+
+
   
 .publication-list a {
   display: block;
